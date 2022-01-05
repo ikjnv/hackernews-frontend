@@ -1,1 +1,2 @@
-### Hackernews frontend built with GraphQL, Apollo and React
+### Hackernews clone frontend
+
