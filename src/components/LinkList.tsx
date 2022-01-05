@@ -15,7 +15,6 @@ const FEED_QUERY = gql`
 `;
 export default function LinkList() {
   const { data } = useQuery(FEED_QUERY);
-
   return (
     <div>
       {data && (
