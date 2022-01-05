@@ -1,2 +1,1 @@
-# hackernews-frontend
-Hackernews frontend built with React, GraphQL
+### Hackernews frontend built with GraphQL, Apollo and React
