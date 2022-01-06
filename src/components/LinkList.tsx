@@ -9,18 +9,30 @@ const FEED_QUERY = gql`
         createdAt
         url
         description
+        postedBy {
+          id
+          name
+        }
+        votes {
+          link {
+            url
+          }
+        }
       }
     }
   }
 `;
+
 export default function LinkList() {
   const { data } = useQuery(FEED_QUERY);
+  console.log(data);
+
   return (
     <div>
       {data && (
         <>
-          {data.feed.links.map((link: any) => (
-          <Link key={link.id} link={link} />
+          {data.feed.links.map((link: any, index: number) => (
+          <Link key={link.id} link={link} index={index} />
           ))}
         </>
       )}
